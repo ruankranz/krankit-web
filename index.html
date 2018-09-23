@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>krankit</title>
+    <meta name="description" content="The krankit website" />
+    <meta name="keywords" content="python, aws, javascript, java, mendix, south africa" />
+    <meta name="author" content="krankit" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/pieces.css" />
+    <script>
+        document.documentElement.className = 'js';
+    </script>
+</head>
+
+<body>
+    <svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-menu" viewBox="0 0 24 24">
+				<title>menu</title>
+				<path d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"/>
+			</symbol>
+			<symbol id="icon-menu-alt" viewBox="0 0 24 24">
+				<title>menu alt</title>
+				<path d="M10.4,6H0V3h10.4C10.4,3,10.4,6,10.4,6z M10.4,10.5H0v3h10.4C10.4,13.5,10.4,10.5,10.4,10.5z M15.1,18H9v3h6.1V18z M23.4,6H13V3h10.4C23.4,3,23.4,6,23.4,6z M23.4,10.5H13v3h10.4C23.4,13.5,23.4,10.5,23.4,10.5z M23.5,18h-6.1v3h6.1V18z"/>
+			</symbol>
+		</svg>
+    <main>
+        <div class="pieces" style="background-image: url(img/normal.jpg)" data-img-alt="url(img/alt.jpg)" data-img-code="url(img/code.jpg)"></div>
+        <div class="overlay overlay--hidden"></div>
+        <div class="content">
+            <div class="content__inner">
+                <div class="content__top">
+                    <h2 class="title">
+                        <span class="title__inner mode mode--design" data-switch data-glitch>cd/usr/krankit</span>
+                    </h2>
+                    <div class="controls">
+                        <a class="codrops-icon--prev hidden" id="back-btn" onclick="closeNav()" title="Back"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+                        <button class="btn btn--menu mode mode--design" data-switch>
+								<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+								<svg class="icon icon--menu-alt"><use xlink:href="#icon-menu-alt"></use></svg>
+							</button>
+                    </div>
+                </div>
+                <div class="menu" id="menu">
+                    <ul class="menu__inner">
+                        <li class="menu__item"><a class="menu__link" onclick="openNav()" data-switch>user information</a></li>
+                        <li class="menu__item"><a class="menu__link" data-switch>work experience</a></li>
+                        <li class="menu__item"><a class="menu__link" href="pages/projects.html" data-switch>work projects</a></li>
+						<li class="menu__item"><a class="menu__link" data-switch>user learning</a></li>
+                        <li class="menu__item"><a href="https://github.com/ruankranz" class="menu__link" data-glitch data-switch>> find me on Medium</a></li>
+                    </ul>
+                </div>
+                <div class="menu menu--code" id="menu">
+                    <ul class="menu__inner">
+                        <li class="menu__item"><a class="menu__link" data-switch>On Coding</a></li>
+                        <li class="menu__item"><a class="menu__link" data-switch>Experiments</a></li>
+                        <li class="menu__item"><a class="menu__link" data-switch>Current Projects</a></li>
+                        <li class="menu__item"><a class="menu__link" data-switch>Tutorials</a></li>
+                        <li class="menu__item"><a href="https://github.com/ruankranz" class="menu__link" data-switch>> Find me on GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="content__bottom">
+                    <div class="switch mode mode--design">
+                        <a class="switch__item switch__item--current">Designer</a>
+                        <a class="switch__item"><span class="mode mode--design" data-switch data-glitch>Coder</span></a>
+                    </div>
+                    <div class="link-wrap">
+                        <a class="contact-link mode mode--design" href="pages\contact.html" data-switch data-glitch>Work with me</a>
+                    </div>
+                </div>
+
+
+                <script>
+                    function openNav() {
+                      document.getElementById("myNav").style.opacity = "100";
+					  document.getElementById("back-btn").classList.remove("hidden");
+					  
+					  var x = document.getElementsByClassName("menu");
+						var i;
+						for (i = 0; i < x.length; i++) {
+							x[i].style.opacity = "0";
+						}	 
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("myNav").style.opacity = "0";
+					  document.getElementById("back-btn").classList.add("hidden");
+					  var x = document.getElementsByClassName("menu");
+						var i;
+						for (i = 0; i < x.length; i++) {
+							x[i].style.opacity = "100";
+						}	 
+                    					  
+                    }
+                </script>
+
+            </div>
+            <!-- /content__inner-->
+			    <div id="myNav" class="overlay overlay-div">
+                    <div class="overlay-content " >
+                        <p>I'm Ruan Kranz.</p>
+                        <p>I'm a <b>software engineer and technology enthusiast</b> living in <b>Cape Town, South Africa.</b> I'm <b>28</b> years old, enjoy travelling and exploring new places, reading books, and coding until the early morning hours!</p>
+                        <p>My main focus areas are web development and dev ops. I have over 5 years experience and have worked with multiple platforms and programming languages too.I'm a curios person, and I'm always trying to figuring something out, or a learn a new trick.</p>
+                    </div>
+                </div>
+        </div>
+        <!-- /content -->
+        <div class="loading"></div>
+    </main>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/charming.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
