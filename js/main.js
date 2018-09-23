@@ -452,6 +452,13 @@
 		el: document.querySelector('.title > .title__inner')
 	};
 	DOM.menuCtrl = document.querySelector('.btn--menu');
+	DOM.userLink = document.querySelector('.user--link');
+	DOM.userInfo = {
+		'info' : {
+			'wrapper': document.querySelector('.user--info'),
+			'items': document.querySelectorAll('.user--info > .info__inner p')
+		}
+	};
 	DOM.menu = {
 		'design' : {
 			'wrapper': document.querySelector('.menu'),
@@ -496,11 +503,27 @@
 			charming(item);
 			DOM.menuCodeItemLetters.push([].slice.call(item.querySelectorAll('span')));
 		});
+		DOM.userInfoItemLetters = [];
+		[].slice.call(DOM.userInfo.info.items).forEach(function(item) {
+			charming(item);
+			DOM.userInfoItemLetters.push([].slice.call(item.querySelectorAll('span')));
+		});
 	}
 
 	function initEvents() {
 		DOM.switchModeCtrls.design.addEventListener('click', switchMode);
 		DOM.switchModeCtrls.code.addEventListener('click', switchMode);
+		
+		DOM.userLink.addEventListener('click', 
+					animateLetters(DOM.userInfoItemLetters, 'in', {
+				delay: function(t,i) {
+					return i*30
+				},
+				//begin: function() {
+					//DOM.menu['code'].wrapper.style.display = 'block';
+				//}
+			})
+		);
 
 		const pauseFxFn = function() {
 				pm.stopLoopFx();
