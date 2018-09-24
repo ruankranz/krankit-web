@@ -452,7 +452,9 @@
 		el: document.querySelector('.title > .title__inner')
 	};
 	DOM.menuCtrl = document.querySelector('.btn--menu');
+	DOM.userClose = document.querySelector('.info--close');
 	DOM.userLink = document.querySelector('.user--link');
+	DOM.userOverlay = document.querySelector('.overlay-div');
 	DOM.userInfo = {
 		'info' : {
 			'wrapper': document.querySelector('.user--info'),
@@ -509,21 +511,42 @@
 			DOM.userInfoItemLetters.push([].slice.call(item.querySelectorAll('span')));
 		});
 	}
+	
+	function animateInfo() {
+				animateLetters(DOM.userInfoItemLetters, 'in', {
+					delay: function(t,i) {
+						return i*30
+					},
+					begin: function() {
+						DOM.menu['design'].wrapper.style.display = 'none';
+						DOM.userClose.style.display = 'block';
+						DOM.userOverlay.style.opacity = '100';
+					}
+				})		
+		
+	};
+	
+	function closeInfo() {
+				animateLetters(DOM.userInfoItemLetters, 'out', {
+					delay: function(t,i,c) {
+						return (c-i-1)*10;
+					},
+				duration: 20,
+				complete: function() {
+					DOM.menu['design'].wrapper.style.display = 'block';
+					DOM.userClose.style.display = 'none';
+					DOM.userOverlay.style.opacity = '0';
+				}
+			})		
+	};
 
 	function initEvents() {
 		DOM.switchModeCtrls.design.addEventListener('click', switchMode);
 		DOM.switchModeCtrls.code.addEventListener('click', switchMode);
 		
-		DOM.userLink.addEventListener('click', 
-					animateLetters(DOM.userInfoItemLetters, 'in', {
-				delay: function(t,i) {
-					return i*30
-				},
-				//begin: function() {
-					//DOM.menu['code'].wrapper.style.display = 'block';
-				//}
-			})
-		);
+		DOM.userLink.addEventListener('click', animateInfo);
+		
+		DOM.userClose.addEventListener('click', closeInfo);
 
 		const pauseFxFn = function() {
 				pm.stopLoopFx();

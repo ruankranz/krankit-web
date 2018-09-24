@@ -47,7 +47,7 @@
                         <span class="title__inner mode mode--design" data-switch data-glitch>cd/usr/krankit</span>
                     </h2>
                     <div class="controls">
-                        <a class="codrops-icon--prev hidden" id="back-btn" onclick="closeNav()" title="Back"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+                        <a class="codrops-icon--prev bck--button info--close" id="back-btn" title="Back"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
                         <button class="btn btn--menu mode mode--design" data-switch>
 								<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
 								<svg class="icon icon--menu-alt"><use xlink:href="#icon-menu-alt"></use></svg>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="menu" id="menu">
                     <ul class="menu__inner">
-                        <li class="user--link menu__item"><a class="menu__link" onclick="openNav()" data-switch>info</a></li>
+                        <li class="user--link menu__item"><a class="menu__link" data-switch>info</a></li>
                         <li class="menu__item"><a class="menu__link" data-switch>experience</a></li>
                         <li class="menu__item"><a class="menu__link" href="pages/projects.html" data-switch>projects</a></li>
 						<li class="menu__item"><a class="menu__link" data-switch>my learning</a></li>
@@ -83,38 +83,20 @@
                 </div>
 
 
-                <script>
-                    function openNav() {
-                      document.getElementById("myNav").style.opacity = "100";
-					  document.getElementById("back-btn").classList.remove("hidden");
-					  
-					  var x = document.getElementsByClassName("menu");
-						var i;
-						for (i = 0; i < x.length; i++) {
-							x[i].style.opacity = "0";
-						}	 
-                    }
-                    
-                    function closeNav() {
-                      document.getElementById("myNav").style.opacity = "0";
-					  document.getElementById("back-btn").classList.add("hidden");
-					  var x = document.getElementsByClassName("menu");
-						var i;
-						for (i = 0; i < x.length; i++) {
-							x[i].style.opacity = "100";
-						}	 
-                    					  
-                    }
-                </script>
 
             </div>
             <!-- /content__inner-->
 			    <div id="myNav" class="overlay overlay-div">
                     <div class="overlay-content user--info" >
 						<ul class="info__inner">
-							<p>I'm Ruan Kranz.</p>
-							<p>I'm a <b>software engineer and technology enthusiast</b> living in <b>Cape Town, South Africa.</b> I'm <b>28</b> years old, enjoy travelling and exploring new places, reading books, and coding until the early morning hours!</p>
-							<p>My main focus areas are web development and dev ops. I have over 5 years experience and have worked with multiple platforms and programming languages too.I'm a curios person, and I'm always trying to figuring something out, or a learn a new trick.</p>
+							<p>User Name: Ruan Kranz</p>
+							<p>Location: Cape Town, South Africa</p>
+							<p>Profession: Software/DevOps Engineer</p>
+							<p>Personality: Curious, Passionate, Analytical</p>
+							<p>Interests : Coding, Gaming, Reading, Traveling</p>
+							<p>Languages: English, Afrikaans</p>
+							<p>Favorite Quote: Anyone who has never made a mistake has never tried anything new.</p>
+							<p>Sense of humor: Is this a joke?</p>
 						</ul>
 					</div>
                 </div>

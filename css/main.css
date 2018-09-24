@@ -112,6 +112,10 @@ a:focus {
 	color: #585656;
 }
 
+.bck--button {
+	display: none;
+}
+
 .btn--menu .icon--menu-alt,
 .btn--menu.mode--code .icon--menu {
 	display: none;
@@ -124,8 +128,8 @@ a:focus {
 /* Icons */
 .icon {
 	display: block;
-	width: 1.5em;
-	height: 1.5em;
+	width: 4.5em;
+	height: 2.75em;
 	margin: 0 auto;
 	fill: currentColor;
 }
@@ -339,7 +343,7 @@ a:focus {
 	height: 90vh;
 	margin: auto;
 	flex: none;
-	position: relative;
+	top: 25%;
 	background-color: transparent;
 }
 
@@ -355,7 +359,6 @@ a:focus {
 .overlay p {
     padding: 8px;
     text-decoration: none;
-    
     color: #fff;
     display: block;
     transition: 0.3s;
