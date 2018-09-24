@@ -451,7 +451,6 @@
 	DOM.title = {
 		el: document.querySelector('.title > .title__inner')
 	};
-	DOM.menuCtrl = document.querySelector('.btn--menu');
 	DOM.userClose = document.querySelector('.info--close');
 	DOM.userLink = document.querySelector('.user--link');
 	DOM.userOverlay = document.querySelector('.overlay-div');
@@ -461,6 +460,7 @@
 			'items': document.querySelectorAll('.user--info > .info__inner p')
 		}
 	};
+	DOM.menuCtrl = document.querySelector('.btn--menu');
 	DOM.menu = {
 		'design' : {
 			'wrapper': document.querySelector('.menu'),
@@ -519,6 +519,7 @@
 					},
 					begin: function() {
 						DOM.menu['design'].wrapper.style.display = 'none';
+						DOM.switchCtrls.style.display = 'none';
 						DOM.userClose.style.display = 'block';
 						DOM.userOverlay.style.opacity = '100';
 					}
@@ -536,6 +537,7 @@
 					DOM.menu['design'].wrapper.style.display = 'block';
 					DOM.userClose.style.display = 'none';
 					DOM.userOverlay.style.opacity = '0';
+					DOM.switchCtrls.style.display = 'block';
 				}
 			})		
 	};
