@@ -343,7 +343,7 @@ a:focus {
 	height: 90vh;
 	margin: auto;
 	flex: none;
-	top: 25%;
+	top: 18%;
 	background-color: transparent;
 }
 
@@ -362,6 +362,7 @@ a:focus {
     color: #fff;
     display: block;
     transition: 0.3s;
+	font-size: 13px; font-family: 'Press Start 2P', cursive;
 }
 
 .overlay a:hover, .overlay a:focus {

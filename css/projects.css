@@ -1,4 +1,4 @@
-.demo-6 {
+.projects {
 	--color-text: #3f3f55;
     --color-bg: #161619;
     --color-link: #3f3f56;
@@ -67,7 +67,7 @@
 .grid__item-title {
 	font-size: 3.5vw;
 	margin: 0 -3rem 2rem 0;
-	color: #fff;
+	color: #e04643;
 	text-align: right;
 	text-transform: lowercase;
 }
