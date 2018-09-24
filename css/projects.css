@@ -73,7 +73,7 @@
 }
 
 .grid__item-title--inverted {
-	color: #0e0ca5;
+	color: #e04643;
 }
 
 .grid__item-cta {
@@ -82,7 +82,7 @@
 	font-weight: bold;
 	display: block;
 	font-size: 1.5rem;
-	color: #9e0db7;
+	color: #6dcc9e;
 	text-transform: lowercase;
 	display: flex;
 	justify-content: flex-end;

@@ -339,7 +339,7 @@ a:focus {
 
 
 .overlay-div { 
-	width: 58.6572vh;
+	width: 68vh;
 	height: 90vh;
 	margin: auto;
 	flex: none;
@@ -357,12 +357,13 @@ a:focus {
 }
 
 .overlay p {
+	letter-spacing: 0.01px;
     padding: 8px;
     text-decoration: none;
     color: #fff;
     display: block;
     transition: 0.3s;
-	font-size: 13px; font-family: 'Press Start 2P', cursive;
+	font-size: 1.5vmin; font-family: 'Press Start 2P', cursive;
 }
 
 .overlay a:hover, .overlay a:focus {

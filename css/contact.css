@@ -76,10 +76,6 @@
 	color: #fff;
 }
 
-.form__msg {
-	min-height: 250px;
-	height: 300px;
-}
 
 .form__input:focus {
 	outline: none;
