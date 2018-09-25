@@ -6,7 +6,7 @@
 }
 
 body {
-	font-family: 'Roboto',sans-serif;
+	font-family: 'Press Start 2P';
 	color: #6dcc9e;
 	background: #232323;
 	-webkit-font-smoothing: antialiased;
@@ -158,6 +158,7 @@ a:focus {
 	align-items: center;
 	flex: none;
 	width: 100%;
+	font-family: 'Roboto Mono', monospace;
 }
 
 .title {
@@ -175,6 +176,7 @@ a:focus {
 }
 
 .title__inner.mode--code {
+	font-family: 'Roboto Mono', monospace;
 	text-transform: lowercase;
 }
 
@@ -192,7 +194,7 @@ a:focus {
 
 .mode--code,
 .menu--code .menu__link {
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Press Start 2P';
 	text-transform: lowercase;
 	color: #e04643;
 }
@@ -217,6 +219,7 @@ a:focus {
 	width: 100%;
 	margin: auto 0 2em 0;
 	text-align: left;
+	
 }
 
 .menu:not(.menu--code) .menu__item {
@@ -250,6 +253,7 @@ a:focus {
 	position: relative;
 	display: flex;
 	align-items: center;
+	font-family: 'Roboto Mono', monospace;
 }
 
 .switch__content {
@@ -301,6 +305,7 @@ a:focus {
 }
 
 .contact-link {
+	font-family: 'Roboto Mono', monospace;
 	display: inline-block;
 	padding: 1em 0;
 }
