@@ -107,9 +107,9 @@ a:focus {
 
 .btn--menu {
 	font-size: 1em;
-	margin: 0 0 0 2em;
+	margin: 0 0 0 5em;
 	padding: 0;
-	color: #585656;
+	color: #6dcc9e;
 }
 
 .bck--button {
@@ -128,7 +128,7 @@ a:focus {
 /* Icons */
 .icon {
 	display: block;
-	width: 4.5em;
+	width: 2.5em;
 	height: 2.75em;
 	margin: 0 auto;
 	fill: currentColor;
