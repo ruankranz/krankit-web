@@ -515,7 +515,7 @@
 	function animateInfo() {
 				animateLetters(DOM.userInfoItemLetters, 'in', {
 					delay: function(t,i) {
-						return i*30
+						return i*10
 					},
 					begin: function() {
 						DOM.menu['design'].wrapper.style.display = 'none';
@@ -720,7 +720,7 @@
 				
 			animateLetters(DOM.menuCodeItemLetters, 'in', {
 				delay: function(t,i) {
-					return i*30
+					return i*10
 				},
 				begin: function() {
 					DOM.menu['code'].wrapper.style.display = 'block';

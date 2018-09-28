@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 
-.demo-5 {
-	--color-text: #5a5a5a;
-    --color-bg: #040404;
+.contact {
+	--color-text: #6dcc9e;
+    --color-bg: #232323;
     --color-link: #5a5a5a;
     --color-link-hover: #e84613;
     --color-info: #5a5a5a;
