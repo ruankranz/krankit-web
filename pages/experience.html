@@ -1,0 +1,145 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script>
+<!-- See http://lab.hakim.se/reveal-js/ for a more in-depth demo -->
+<!-- and https://github.com/hakimel/reveal.js/ for a reference -->
+
+<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+<script>
+var cdn = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/';
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  help: true, // Show help overlay when ? is pressed
+  transition: 'convex', // default / none / slide / concave / convex / zoom
+  transitionSpeed: 'default', // default / fast / slow
+  backgroundTransition: 'default', // default / none / fade / slide / convex / concave/ zoom
+  dependencies: [ // Comment in/out as needed
+    { src: cdn+'lib/js/classList.js', // Cross-browser shim that fully implements classList
+      condition: function() { return !document.body.classList; } },
+    // { src: cdn+'plugin/markdown/marked.js',   // Interpret Markdown in <section> elements [1]
+    //   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    // { src: cdn+'plugin/markdown/markdown.min.js', // Interpret Markdown in <section> elements [2]
+    //   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: cdn+'plugin/highlight/highlight.min.js', async: true,  // Syntax highlighting <code> elements
+      callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: cdn+'plugin/zoom-js/zoom.min.js', async: true}, // Alt+click zoom on elements
+    { src: cdn+'plugin/notes/notes.min.js', async: true}, // Speaker notes
+		{ src: cdn+'plugin/math/math.min.js', async: true }  // MathJax
+  ], 
+  math: {
+		mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+		config: 'TeX-AMS_HTML-full'  // See https://docs.mathjax.org/en/latest/config-files.html
+	},
+});
+
+// Probably should link these to smaller test images / faster site! 
+var kImg = document.getElementById("test-img");
+kImg.onclick = function() {
+  var newNum = Number(kImg.getAttribute("num")) + 1;
+  kImg.setAttribute("num", newNum);
+  // kImg.setAttribute("data-src", kodakImg(newNum));
+  kImg.src = kodakImg(newNum);
+}
+
+// Randomize inital image on document load -- too late?
+// Reveal.addEventListener( 'ready', function( event ) {
+//   kImg.src = kodakImg(Math.round(Math.random()*24));
+// } );
+
+function kodakImg(n) {
+  // Images are numbered 01, 02, ..., 24
+  var num = n < 1 ? n + 23 : n-1;
+  num = (num % 24) + 1;
+  num = ((num < 10) ? "0" : "") + String(num); // Pad to two digits with a zero
+  return "http://r0k.us/graphics/kodak/kodak/kodim"+num+".png"
+}
+</script>
+<div class="reveal">
+    <!-- Wrap all slides in a single "slides" class -->
+    <div class="slides">
+        <!-- Each section element contains an individual slide -->
+        <!-- Nested sections produce vertically connected slides -->
+        <section id="title">
+            <section>
+                <h1>Work Experience</h1>
+                <p class="fragment fade-up">Let me walk you through... </p>
+                <div class="fragment fade-up">
+                    <h2 class="fragment shrink">my experience</h2>
+                </div>
+            </section>
+            <section>
+                <h4>This presentation is for assessment in<br/> Unit 2 of Computing and App Design at FCC 2017
+                </h4>
+            </section>
+        </section>
+        <section>
+            <section id="show-a-link">
+                <h1>Business Engineer</h1>
+                <!--  Note the use of data-src to aid Lazy Loading of large external media -->
+                <!--  https://github.com/hakimel/reveal.js#lazy-loading    -->
+                <img data-src="https://pbs.twimg.com/profile_images/458984379897741312/_MSi_TLU_400x400.jpeg" num="08" height="300px" id="test-img">
+            <p>        <a href="https://www.teraco.co.za/">Teraco Data Environments</a>
+              </p>     <p>Read the case study by
+                    <a href="https://www.mendix.com/customers/teraco-data-environments/">Mendix...</a>
+                </p>
+                <aside class="notes">
+                    Speaker notes are added like this
+                </aside>
+            </section>
+            <section>
+                <h3>Role Description</h3>
+                <p>
+                    As a Business Engineer I was responsible for the development and implementation of innovative business solutions, from designing business models to business processes, to the organizational structure and it's information systems.
+                </p>
+            </section>
+            <section>
+                <h3>Day to day</h3>
+                <p>
+                    Teraco’s core backend system, helping the company to manage sales, operations and billing. For instance, Ozone seamlessly connects to a back-end database to collect and present daily data from power devices in each client cabinet in the colocation centers – data that fuels order processing and billing workflows. Ozone helps Teraco keep track of thousands of service orders for hundreds of clients.
+                </p>
+            </section>			
+            <section>
+                <h3>About Teraco Data Environments</h3>
+                <p>
+                    Teraco is the first provider of resilient, vendor neutral data environments in South Africa. Clients benefit from the cost savings and improved resilience of securely housing their information systems and networking equipment in a colocation facility purpose-built and operated to global best practice by an expert organisation with an absolute focus on data centre technology and infrastructure.
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <h1>Code & Math Slide</h1>
+            <p>Some code follows </p>
+            <pre><code>
+    $(function () {
+      $('a').click(function(event) {
+        alert('Thanks for visiting!'');
+      });
+    });
+  </code></pre>
+            <p> Test inline maths: $e^{\mathrm{i} x} = \cos(x) + \mathrm{i} \sin(x)$ </p>
+        </section>
+        <section>
+            <h1> Internal links </h1>
+            <p>Back to the <a href="#/title">top</a>? </p>
+        </section>
+
+        <section>
+            <section>
+                <h1>The End</h1>
+                <p>Any Questions?</p>
+            </section>
+            <section>
+                <h3>References</h3>
+                <ul>
+                    <li> <a href="https://code.org/educate/csp/unit2">Code.org CSP Unit 2</a></li>
+                    <li> <a href="http://csfieldguide.org.nz/en/chapters/coding-compression.html">CS Field Guide: Compression</a></li>
+                    <li> <a href="https://en.wikipedia.org/wiki/Lenna">Wikipedia: Lenna</a></li>
+                    <li> <a href="http://r0k.us/graphics/kodak/">Kodak Lossless True Color Image Suite</a></li>
+                </ul>
+            </section>
+        </section>
+    </div>
+</div>
