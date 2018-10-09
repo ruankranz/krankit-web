@@ -7,8 +7,8 @@
 
 body {
 	font-family: 'Press Start 2P';
-	color: #6dcc9e;
-	background: #232323;
+	color: #1ff042;
+	background: #1A1E1B;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -21,7 +21,7 @@ main {
 
 a {
 	text-decoration: none;
-	color: #6dcc9e;
+	color: #1ff042;
 	outline: none;
 	cursor: pointer;
 }
@@ -109,7 +109,7 @@ a:focus {
 	font-size: 1em;
 	margin: 0 0 0 5em;
 	padding: 0;
-	color: #6dcc9e;
+	color: #1ff042;
 }
 
 .bck--button {
@@ -196,7 +196,7 @@ a:focus {
 .menu--code .menu__link {
 	font-family: 'Press Start 2P';
 	text-transform: lowercase;
-	color: #e04643;
+	color: #FF3121;
 }
 
 .menu {
@@ -278,12 +278,12 @@ a:focus {
 .switch__item--current {
 	pointer-events: none;
 	color: #232323;
-	background-color: #6dcc9e;
+	background-color: #1ff042;
 }
 
 .mode--code .switch__item--current {
 	color: #232323;
-	background-color: #e04643;
+	background-color: #FF3121;
 }
 
 .switch__item:first-child::after {
@@ -344,7 +344,7 @@ a:focus {
 
 
 .overlay-div { 
-	width: 68vh;
+	width: 60vh;
 	height: 90vh;
 	margin: auto;
 	flex: none;
@@ -387,5 +387,11 @@ a:focus {
   .overlay .closebtn {
     top: 15px;
     right: 35px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay p {
+    font-size: 2.4vw;
   }
 }
