@@ -8,9 +8,8 @@
 body {
 	font-family: 'Press Start 2P';
 	color: #1ff042;
-	background: #1A1E1B;
+	background: #191919;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -375,12 +374,6 @@ a:focus {
     color: #f1f1f1;
 }
 
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
