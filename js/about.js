@@ -1,5 +1,6 @@
+var commands = ["skills", "joke", "music", "clear"]
 var inputReady = true;
-var input = $('.404-input');
+var input = $('.about-input');
 input.focus();
 $('.container').on('click', function(e) {
     input.focus();
@@ -10,9 +11,9 @@ input.on('keyup', function(e) {
     // console.log(inputReady);
 });
 
-$('.four-oh-four-form').on('submit', function(e) {
+$('.about-form').on('submit', function(e) {
     e.preventDefault();
-    var val = $(this).children($('.404-input')).val().toLowerCase();
+    var val = $(this).children($('.about-input')).val().toLowerCase();
     var href;
 
     if (val === 'kittens') {
@@ -20,29 +21,41 @@ $('.four-oh-four-form').on('submit', function(e) {
     } else if (val === 'skills') {
         showSkills();
     } else if (val === 'music') {
-        var audio = new Audio('../music/song.mp3');
-		audio.play();
-		resetForm();	
+        playSong()
+    } else if (val === 'joke') {
+        getJoke()
     } else if (val === 'exit') {
         exit();
+    } else if (val === 'clear') {
+        resetForm();
+		location.reload();
     } else {
         resetForm();
     }
 });
 
 function exit() {
-	window.location = "../index.html";
+    window.location = "../index.html";
+}
+
+function playSong() {
+    var audio = new Audio('../music/song.mp3');
+    audio.play();
+    resetForm();
 }
 
 function resetForm(withKittens) {
+	
+	
     var message = "Sorry that command is not recognized."
-    var input = $('.404-input');
-
-    if (withKittens) {
+    var input = $('.about-input');
+	var val = input.val().toLowerCase();
+    if (val === "kittens") {
         $('.kittens').removeClass('kittens');
         message = "Huzzzzzah Kittehs!"
+    } else if (commands.indexOf(val) > -1)  {
+        message = ""
     }
-	
 
     $('.new-output').removeClass('new-output');
     input.val('');
@@ -53,6 +66,35 @@ function resetForm(withKittens) {
     ), {
         duration: 100
     }
+}
+
+function showSkills() {
+    $('.terminal').append('<p class="prompt">I\'m a jacks-of-all-trades</p>');
+    $('.terminal').append('<p class="prompt">Right tool for the job</p>');
+    $('.terminal').append('<p class="prompt">Designing for simplicity is my approach</p>');
+	$('.terminal').append('<p class="prompt">You can also ask me about my specific skills...</p>');
+    resetForm();
+
+}
+
+function getJoke() {
+
+    $('.new-output').velocity(
+        'scroll'
+    ), {
+        duration: 100
+    }    
+	
+	setTimeout(function() {
+        var joke;
+
+        $.get('https://geek-jokes.sameerkumar.website/api', function(result) {
+            joke = result;
+            $('.terminal').append('<p class="prompt">' + joke + '</p><p class="prompt output new-output"></p>');
+            resetForm();
+        });
+    });
+
 }
 
 function showKittens() {

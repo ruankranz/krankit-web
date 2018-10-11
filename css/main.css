@@ -376,7 +376,7 @@ a:focus {
 
 
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
+  .overlay a {font-size: 20px;}
   .overlay .closebtn {
     top: 15px;
     right: 35px;
