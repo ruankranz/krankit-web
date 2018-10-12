@@ -1,4 +1,4 @@
-var commands = ["skills", "joke", "music", "clear"]
+var commands = ["help", "clear", "exit", "skills", "interests", "personality", "bitcoin", "travel", "learning", "joke", "music", "clear"];
 var inputReady = true;
 var input = $('.about-input');
 input.focus();
@@ -18,6 +18,8 @@ $('.about-form').on('submit', function(e) {
 
     if (val === 'kittens') {
         showKittens();
+    } else if (val === 'help') {
+        showHelp();
     } else if (val === 'skills') {
         showSkills();
     } else if (val === 'music') {
@@ -68,11 +70,31 @@ function resetForm(withKittens) {
     }
 }
 
+function showHelp() {
+	
+    $('.new-output').velocity(
+        'scroll'
+    ), {
+        duration: 100
+    }    	
+	$('.terminal').append('<p class="prompt">'+ commands +'</p>');
+    resetForm();
+
+}
+
 function showSkills() {
-    $('.terminal').append('<p class="prompt">I\'m a jacks-of-all-trades</p>');
-    $('.terminal').append('<p class="prompt">Right tool for the job</p>');
-    $('.terminal').append('<p class="prompt">Designing for simplicity is my approach</p>');
+	
+    $('.new-output').velocity(
+        'scroll'
+    ), {
+        duration: 100
+    }    	
+	$('.terminal').append('<img class="terminal-img" src="../img/Stack-Developer.jpg">');
+	$('.terminal').append('<p class="prompt">I\'m a jacks-of-all-trades</p>');
+    $('.terminal').append('<p class="prompt">I\'m knowledgeable in every level of how the web works: from setting up and configuring Linux servers, writing server-side APIs, diving into the client-side JavaScript powering an application, and turning a “design eye” to the CSS</p>');
+    $('.terminal').append('<p class="prompt">Back-end development is my preference because I love manipulating data</p>');
 	$('.terminal').append('<p class="prompt">You can also ask me about my specific skills...</p>');
+	$('.terminal').append('<a href="https://embed.stackshare.io/stacks/embed/487d00c580ca76909bfc9feb0a1653" class="prompt">See my tech stack</a>');	
     resetForm();
 
 }

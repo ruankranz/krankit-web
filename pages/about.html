@@ -1,41 +1,54 @@
-
-
 <!DOCTYPE html>
+
 <html lang="en" class="no-js">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>krankit</title>
-      <meta name="description" content="Codes are a puzzle. A game, just like any other game." />
-      <meta name="keywords" content="ruan, kranz, python, aws, javascript, java, mendix, south africa, krankit, freelance, devops" />
-      <meta name="author" content="krankit" />
-      <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" type="text/css" href="../css/about.css" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-   </head>
-   <body>
-      <div class="container">
-         <form class="about-form">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>krankit</title>
+    <meta name="description" content="Codes are a puzzle. A game, just like any other game." />
+    <meta name="keywords" content="ruan, kranz, python, aws, javascript, java, mendix, south africa, krankit, freelance, devops" />
+    <meta name="author" content="krankit" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/about.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form class="about-form">
             <input type="text" class="about-input">
-         </form>
-         <div class="terminal">
-            <p class="prompt">Name: Ruan Kranz</p>
+        </form>
+        <div class="terminal">
+			<p class="prompt">Name: Ruan Kranz</p>
             <p class="prompt">ROLE: full stack developer</p>
             <p class="prompt">Interests: Coding, gaming, bitcoin, travel, reading, learning</p>
-            <p class="prompt">Personality: Curiois, passionate, focused, analytical</p>
+            <p class="prompt">Personality: Curious, passionate, analytical</p>
             <p class="prompt">Skills: Back-end, Front-end, DevOps, Scripting, Design</p>
             <p class="prompt">...</p>
             <p class="prompt">...</p>
-            <p class="prompt">Try typing some of the words above</p>
-			<p class="prompt">Or maybe "random", "music", or "kittens"!</p>
-            <p class="prompt">You can also type "exit" to go back anytime</p>
+            <div>
+                <div id="typed-strings">
+                    <p class="prompt">Type the words above ^1000</p>
+                    <p class="prompt">To leave type "exit" ^1000</p>
+                    <p class="prompt">Type "HELP" for a list of commands ^1000</p>
+                </div>
+                <span class="prompt" id="typed"></span>
+            </div>
             <p class="prompt output new-output"></p>
-         </div>
-      </div>
-      <script src="../js/about.js"></script>
-   </body>
-</html>
+        </div>
+    </div>
+    <script src="../js/about.js"></script>
+    <script>
+			
+	
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings'
+          });
+    </script>
+</body>
 
+</html>
