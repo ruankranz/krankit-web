@@ -35,6 +35,13 @@ body {
   background-color: black;
 }
 
+.center {
+	margin: auto;
+	max-width: 800px;
+	min-height: 400px;
+	
+}
+
 .about {
   position: relative;
   top: 0;
@@ -60,15 +67,35 @@ body {
 
 .terminal {
   position: relative;
-  padding: 2rem;
+  display: block;
+margin: auto;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+clear: both;
+max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
+
+.terminal-bar {
+width: 100%;
+height: 100%;
+padding: 5px 0;
+font-size: 0.75em;
+text-align: center;
+text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+background-color: #f8f8f8;
+background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+margin: 0;
+}
+
 .terminal .prompt {
   color: #1ff042;
   display: block;
   font-family: 'AndaleMono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  text-indent:-0.8em;
+
   font-size: 0.9em;
   letter-spacing: 0.15em;
   white-space: pre-wrap;
