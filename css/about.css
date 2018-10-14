@@ -84,6 +84,7 @@ text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
 background-color: #f8f8f8;
 background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
 margin: 0;
+color: #FF3121;
 }
 
 .terminal .prompt {
