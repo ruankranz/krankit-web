@@ -20,7 +20,7 @@ main {
 
 a {
 	text-decoration: none;
-	color: #1ff042;
+	color: inherit;
 	outline: none;
 	cursor: pointer;
 }
@@ -106,7 +106,7 @@ a:focus {
 
 .btn--menu {
 	font-size: 1em;
-	margin: 0 0 0 6em;
+	margin: 0 0 0 0;
 	padding: 0;
 	color: #1ff042;
 }

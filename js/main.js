@@ -442,7 +442,7 @@
 	DOM.title = {
 		el: document.querySelector('.title > .title__inner')
 	};
-	DOM.menuCtrl = document.querySelector('.btn--menu');
+	DOM.menuCtrl = document.querySelector('.controls');
 	DOM.menu = {
 		'design' : {
 			'wrapper': document.querySelector('.menu'),
