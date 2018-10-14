@@ -1,5 +1,5 @@
-var mydiv = $(".terminal");
-mydiv.scrollTop(mydiv.prop("scrollHeight"));
+
+
 var commands = ["help", "clear", "exit", "skills", "interests", "personality", "bitcoin", "travel", "learning", "joke", "music"];
 var inputReady = true;
 var input = $('.about-input');
