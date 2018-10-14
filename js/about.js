@@ -52,11 +52,6 @@ function playSong() {
     resetForm();
 }
 
-function scrollToBottom(id) {
-   var div = document.getElementById(id);
-   div.scrollTop = div.scrollHeight - div.clientHeight;
-}
-
 function resetForm(withKittens) {
 	
 	
@@ -101,9 +96,6 @@ function showSkills() {
 	$('.terminal').append('<p class="prompt">Computer science gives you far more leverage to change the world than any other study in our age.</p>');
 	$('.terminal').append('<a href="https://embed.stackshare.io/stacks/embed/487d00c580ca76909bfc9feb0a1653" class="prompt">See my tech stack</a>');	
     resetForm();
-	$('.terminal').velocity("scroll", { container: $(".new-output") });
-	scrollToBottom();
-
 }
 
 function getJoke() {
