@@ -52,6 +52,16 @@ function playSong() {
     resetForm();
 }
 
+function scrollToOutput() {
+	var $container = $('.terminal'),
+    $scrollTo = $('.new-output');
+
+	// Or you can animate the scrolling:
+	$container.animate({
+		scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
+	})	
+}
+
 function resetForm(withKittens) {
 	
 	
@@ -69,11 +79,7 @@ function resetForm(withKittens) {
     input.val('');
     $('.terminal').append('<p class="prompt">' + message + '</p><p class="prompt output new-output"></p>');
 
-    $('.new-output').velocity(
-        'scroll'
-    ), {
-        duration: 100
-    }
+	scrollToOutput();
 }
 
 
@@ -117,11 +123,7 @@ function getJoke() {
 function showKittens() {
     $('.terminal').append('<p class="prompt">Okay.. You asked for it!</p>');
 	
-	$('.new-output').velocity(
-        'scroll'
-    ), {
-        duration: 100
-    }
+	scrollToOutput();
 
     setTimeout(function() {
         var gif;
@@ -131,6 +133,8 @@ function showKittens() {
             resetForm(true);
         });
     });
+	
+	scrollToOutput();
 
 
 }
