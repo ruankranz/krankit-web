@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 
 .contact {
-	--color-text: #6dcc9e;
+	--color-text: #1ff042;
     --color-bg: #232323;
     --color-link: #5a5a5a;
     --color-link-hover: #e84613;
@@ -51,7 +51,7 @@
     margin: 0 0 0.5rem 0;
     display: flex;
     overflow: hidden;
-    color: #6dcc9e;
+    color: #1ff042;
 }
 
 .form__label span {
@@ -96,7 +96,7 @@ input:-webkit-autofill {
 	padding: 1.5rem;
 	display: flex;
 	overflow: hidden;
-	color: #6dcc9e;
+	color: #1ff042;
 	font-weight: bold;
 }
 
@@ -110,7 +110,7 @@ input:-webkit-autofill {
     font-size: 0.85rem;
     border: 0;
     margin: 1.2rem 0 0 auto;
-    background: #6dcc9e;
+    background: #1ff042;
     border-radius: 5px;
     color: #FEFEFE;
     align-self: center;

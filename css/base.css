@@ -97,11 +97,10 @@ a:focus {
 
 /* Icons */
 .icon {
-	display: block;
 	width: 1.5em;
 	height: 1.5em;
 	margin: 0 auto;
-	fill: #6dcc9e;
+	fill: #1ff042;
 	pointer-events: none;
 }
 
@@ -270,7 +269,7 @@ a.demo--current {
 		margin-right: 15px;
 	}
 	a.demo--current {
-		background: #6dcc9e;
+		background: #1ff042;
 	}
 	.demo span {
 		line-height: 1;

@@ -1,5 +1,5 @@
 .projects {
-	--color-text: #6dcc9e;
+	--color-text: #1ff042;
     --color-bg: #232323;
     --color-link: #3f3f56;
     --color-link-hover: #760fd5;
@@ -67,13 +67,13 @@
 .grid__item-title {
 	font-size: 3.5vw;
 	margin: 0 -3rem 2rem 0;
-	color: #e04643;
+	color: #FF3121;
 	text-align: right;
 	text-transform: lowercase;
 }
 
 .grid__item-title--inverted {
-	color: #e04643;
+	color: #FF3121;
 }
 
 .grid__item-cta {
@@ -82,7 +82,7 @@
 	font-weight: bold;
 	display: block;
 	font-size: 1.5rem;
-	color: #6dcc9e;
+	color: #1ff042;
 	text-transform: lowercase;
 	display: flex;
 	justify-content: flex-end;

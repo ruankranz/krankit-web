@@ -1,13 +1,4 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
+
 ;(function(window) {
 
 	// Helper vars and functions.
@@ -451,16 +442,7 @@
 	DOM.title = {
 		el: document.querySelector('.title > .title__inner')
 	};
-	DOM.userClose = document.querySelector('.info--close');
-	DOM.userLink = document.querySelector('.user--link');
-	DOM.userOverlay = document.querySelector('.overlay-div');
-	DOM.userInfo = {
-		'info' : {
-			'wrapper': document.querySelector('.user--info'),
-			'items': document.querySelectorAll('.user--info > .info__inner p')
-		}
-	};
-	DOM.menuCtrl = document.querySelector('.btn--menu');
+	DOM.menuCtrl = document.querySelector('.controls');
 	DOM.menu = {
 		'design' : {
 			'wrapper': document.querySelector('.menu'),
@@ -505,13 +487,10 @@
 			charming(item);
 			DOM.menuCodeItemLetters.push([].slice.call(item.querySelectorAll('span')));
 		});
-		DOM.userInfoItemLetters = [];
-		[].slice.call(DOM.userInfo.info.items).forEach(function(item) {
-			charming(item);
-			DOM.userInfoItemLetters.push([].slice.call(item.querySelectorAll('span')));
-		});
 	}
 	
+	
+	//ToDo: delete
 	function animateInfo() {
 				animateLetters(DOM.userInfoItemLetters, 'in', {
 					delay: function(t,i) {
@@ -526,7 +505,7 @@
 				})		
 		
 	};
-	
+	//ToDo: delete
 	function closeInfo() {
 				animateLetters(DOM.userInfoItemLetters, 'out', {
 					delay: function(t,i,c) {
@@ -546,10 +525,6 @@
 		DOM.switchModeCtrls.design.addEventListener('click', switchMode);
 		DOM.switchModeCtrls.code.addEventListener('click', switchMode);
 		
-		DOM.userLink.addEventListener('click', animateInfo);
-		
-		DOM.userClose.addEventListener('click', closeInfo);
-
 		const pauseFxFn = function() {
 				pm.stopLoopFx();
 				gfx.stopGlitch();
