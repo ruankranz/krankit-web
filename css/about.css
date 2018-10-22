@@ -32,11 +32,15 @@
     }
 }
  .center {
-     margin: auto;
+
+	 margin: 2em auto auto auto;
      max-width: 1200px;
      min-height: 400px;
-	 width: 80vw;
-     height: 60vh;
+	 overflow: hidden;
+	 height: 100%;
+     width: 100%;
+     overflow: hidden;
+     position: relative;
 }
  .about {
      position: relative;
@@ -61,17 +65,18 @@
      background-color: black;
 }
  .terminal {
-     position: relative;
      display: block;
      margin: auto;
      border-radius: 10px;
      box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
      clear: both;
      max-height: 800px;
-     overflow-x: hidden;
-     overflow-y: visible;
-	 height: 100%;
-	 width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
+    overflow-y: scroll;
 }
  .terminal-bar {
 
