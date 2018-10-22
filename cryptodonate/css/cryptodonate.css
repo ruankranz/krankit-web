@@ -2,7 +2,7 @@
 display: inline-block;
 color: #1ff042;
 cursor: pointer;
-font-family: 'Press Start 2P';
+font-family: 'Roboto Mono', monospace;
 }
 
 .cryptodonate-btn:hover {

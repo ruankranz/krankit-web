@@ -8,15 +8,14 @@
     <meta name="description" content="Codes are a puzzle. A game, just like any other game." />
     <meta name="keywords" content="ruan, kranz, python, aws, javascript, java, mendix, south africa, krankit, freelance, devops, web, dev, development" />
     <meta name="author" content="krankit" />
-	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <link rel="shortcut icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/pieces.css" />
-    <link href="cryptodonate/css/cryptodonate.css" rel="stylesheet"/>
-
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/about.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         document.documentElement.className = 'js';
     </script>
@@ -38,12 +37,12 @@
 			</symbol>
 		</svg>
     <main>
-        <div class="pieces" style="background-image: url(img/normal.jpg)" data-img-alt="url(img/alt.jpg)" data-img-code="url(img/code.jpg)"></div>
+
         <div class="content">
             <div class="content__inner">
                 <div class="content__top">
                     <h2 class="title">
-                        <span class="title__inner mode mode--design" data-switch data-glitch>cd /usr/krankit</span>
+                        <a href="../index.html" ><span class="title__inner mode mode--design" data-switch data-glitch>cd /usr/krankit</span></a>
                     </h2>
                     <div class="controls mode--design">
                         <a class="icon" href="https://www.linkedin.com/in/ruankranz/"><svg class="icon icon--linkedin" data-switch><use xlink:href="#icon-linkedin"></use></svg></a>
@@ -51,26 +50,29 @@
                         <a class="icon" href="https://twitter.com/krankit_io"><svg class="icon icon--twitter" data-switch><use xlink:href="#icon-twitter"></use></svg></a>
                     </div>
                 </div>
-                <div class="menu" id="menu">
-                    <ul class="menu__inner">
-						<li class="menu__item"><a class="menu__link" href="https://blog.krankit.co.za/about/" data-switch>about</a></li>
-                        <li class="menu__item"><a class="menu__link" href="pages/projects.html" data-switch>projects</a></li>						
-                        <li class="menu__item"><a class="menu__link" href="https://blog.krankit.co.za" data-switch> > blog</a></li>
-						<li class="menu__item"><a href="https://codepen.io/krankit/#" class="menu__link" data-switch>> codepen</a></li>						
-						<li class="menu__item"><a class="menu__link bitcoin" data-switch></a></li>
-						
-                    </ul>
+
+                <div class="container center">
+                    <form class="about-form">
+                        <input type="text" class="about-input">
+                    </form>
+                    <div class="terminal">
+                        <div class="terminal-bar"><span class="title">info ><span class="terminal-height">terminal</span></span>
+                        </div>
+                        <p class="prompt">Name: Ruan Kranz</p>
+                        <p class="prompt">ROLE: full stack web developer</p>
+                        <p class="prompt">Level: 5+ years experience</p>
+                        <p class="prompt">Personality: Curious, passionate, analytical</p>
+                        <p class="prompt">Skills: Back-end, Front-end, DevOps, Scripting, Design</p>
+                        <p class="prompt">Interests: Coding, gaming, bitcoin, travel, reading, learning</p>
+                        <p class="prompt"></p>
+                        <p class="prompt">Type the words above ^1000</p>
+                        <p class="prompt">To leave type "exit" ^1000</p>
+                        <p class="prompt">Type "HELP" for a list of commands ^1000</p>
+                        <p class="prompt output new-output"></p>
+                    </div>
                 </div>
-                <div class="menu menu--code" id="menu">
-                    <ul class="menu__inner">
-                        <li class="menu__item"><a class="menu__link" data-switch>On Coding</a></li>
-                        <li class="menu__item"><a href="pages/skills.html" class="menu__link" data-switch>Tech Stack</a></li>
-						<li class="menu__item"><a href="https://www.codewars.com/users/ruankranz" class="menu__link" data-switch>> CodeWars</a></li>
-						<li class="menu__item"><a href="https://stackoverflow.com/users/3363724/ruan-kranz" class="menu__link" data-switch>> Stack Overflow</a></li>
-						<li class="menu__item"><a href="https://developer.mendixcloud.com/link/profile/29904" class="menu__link" data-switch>> Mendix</a></li>
-                    </ul>
-                </div>
-				
+                <script src="../js/about.js"></script>
+
                 <div class="content__bottom">
                     <div class="switch mode mode--design">
                         <a class="switch__item switch__item--current">Front-end</a>
@@ -81,48 +83,11 @@
                     </div>
                 </div>
             </div>
-            <!-- /content__inner-->
         </div>
         <!-- /content -->
-        <div class="loading loading--hide">
-		<img class="hidden" src="img/code.jpg">
-		<img class="hidden" src="img/alt.jpg">
-		</div>
+
+        </div>
     </main>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/charming.min.js"></script>
-    <script src="js/main.js"></script>
-	<script>
-				<!-- bitcoin donate -->
-	            !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="cryptodonate/cryptodonate.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
-
-                    var coins = {
-                        'bitcoin': '1JrAyA79D3XFthJaqZGwuFkQZrdKYyHMWw',
-
-                    };
-                    var coinNames = Object.keys(coins);
-
-                    for (var i = 0;i < coinNames.length;i++) {
-                        var coin = coinNames[i];
-                        var address = coins[coin];
-                        var elems = document.getElementsByClassName(coin);
-
-                        for(var j = 0;j < elems.length;j++) {
-                            var cd = new Fr.CryptoDonate({
-                                coin: coin,
-                                address: address,
-                                baseURL: 'cryptodonate/',
-                                buttonLarge: elems[j].className.match('large') !== null,
-
-                                buttonClass: "green",
-                                dialogClass: "green",
-                            });
-                            cd.appendTo(elems[j]);
-                        }
-                    }
-              });
-        </script>
 </body>
 
 </html>
