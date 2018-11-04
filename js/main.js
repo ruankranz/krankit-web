@@ -490,37 +490,6 @@
 	}
 	
 	
-	//ToDo: delete
-	function animateInfo() {
-				animateLetters(DOM.userInfoItemLetters, 'in', {
-					delay: function(t,i) {
-						return i*10
-					},
-					begin: function() {
-						DOM.menu['design'].wrapper.style.display = 'none';
-						DOM.switchCtrls.style.display = 'none';
-						DOM.userClose.style.display = 'block';
-						DOM.userOverlay.style.opacity = '100';
-					}
-				})		
-		
-	};
-	//ToDo: delete
-	function closeInfo() {
-				animateLetters(DOM.userInfoItemLetters, 'out', {
-					delay: function(t,i,c) {
-						return (c-i-1)*10;
-					},
-				duration: 20,
-				complete: function() {
-					DOM.menu['design'].wrapper.style.display = 'block';
-					DOM.userClose.style.display = 'none';
-					DOM.userOverlay.style.opacity = '0';
-					DOM.switchCtrls.style.display = 'block';
-				}
-			})		
-	};
-
 	function initEvents() {
 		DOM.switchModeCtrls.design.addEventListener('click', switchMode);
 		DOM.switchModeCtrls.code.addEventListener('click', switchMode);
