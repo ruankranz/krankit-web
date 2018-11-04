@@ -12,10 +12,10 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/pieces.css" />
-    <link href="cryptodonate/css/cryptodonate.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pieces.css" />
+    <link href="assets/cryptodonate/css/cryptodonate.css" rel="stylesheet"/>
 
     <script>
         document.documentElement.className = 'js';
@@ -38,7 +38,7 @@
 			</symbol>
 		</svg>
     <main>
-        <div class="pieces" style="background-image: url(img/normal.jpg)" data-img-alt="url(img/alt.jpg)" data-img-code="url(img/code.jpg)"></div>
+        <div class="pieces" style="background-image: url(assets/img/normal.jpg)" data-img-alt="url(assets/img/alt.jpg)" data-img-code="url(assets/img/code.jpg)"></div>
         <div class="content">
             <div class="content__inner">
                 <div class="content__top">
@@ -77,7 +77,7 @@
                         <a class="switch__item"><span class="mode mode--design" data-switch data-glitch>Back-end</span></a>
                     </div>
                     <div class="link-wrap">
-                        <a class="contact-link mode mode--design" href="pages\contact.html" data-switch data-glitch>Work with me</a>
+                        <a class="contact-link mode mode--design" href="pages/contact.html" data-switch data-glitch>Work with me</a>
                     </div>
                 </div>
             </div>
@@ -85,17 +85,17 @@
         </div>
         <!-- /content -->
         <div class="loading loading--hide">
-		<img class="hidden" src="img/code.jpg">
-		<img class="hidden" src="img/alt.jpg">
+		<img class="hidden" src="assets/img/code.jpg">
+		<img class="hidden" src="assets/img/alt.jpg">
 		</div>
     </main>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/charming.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/anime.min.js"></script>
+    <script src="assets/js/charming.min.js"></script>
+    <script src="assets/js/main.js"></script>
 	<script>
 				<!-- bitcoin donate -->
-	            !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="cryptodonate/cryptodonate.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
+	            !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="assets/cryptodonate/cryptodonate.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
 
                     var coins = {
                         'bitcoin': '1JrAyA79D3XFthJaqZGwuFkQZrdKYyHMWw',
@@ -112,7 +112,7 @@
                             var cd = new Fr.CryptoDonate({
                                 coin: coin,
                                 address: address,
-                                baseURL: 'cryptodonate/',
+                                baseURL: 'assets/cryptodonate/',
                                 buttonLarge: elems[j].className.match('large') !== null,
 
                                 buttonClass: "green",
