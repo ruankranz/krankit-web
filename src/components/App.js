@@ -5,10 +5,10 @@ import {
     Route,
 } from "react-router-dom";
 import { jsx } from '@emotion/core'
-import About from './components/About'
-import AppGallery from './components/AppGallery'
-import Home from './components/Home'
-import Contact from './components/Contact'
+import About from './About'
+import AppGallery from './AppGallery'
+import Home from './Home'
+import Contact from './Contact'
 
 
 function App() {
