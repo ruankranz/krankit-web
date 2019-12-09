@@ -42,7 +42,7 @@ left: 0;
 display: flex;
 align-items: center;
 width: 100%;
-height: 100%;
+height: 95%;
 `
 
 const content_bottom = css`
@@ -68,7 +68,7 @@ height: 100%;
 
 const content_body = css`
 display: block;
-text-align: left;
+text-align: center;
 font-size: 1.85em;
 flex: none;
 width: 100%;

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { jsx, css } from '@emotion/core'
 import { Link } from "react-router-dom";
+import SocialLinks from './SocialLinks'
 
 function ControlBar() {
     const [color, setColor] = useState("green");
@@ -9,9 +10,7 @@ function ControlBar() {
     return (
         <>
             <div css={ control_bar }>
-                <Link to="/about">Home</Link>
-                <Link to="/">About</Link>
-                <Link to="/gallery">Code</Link>
+                <SocialLinks/>
             </div>
             <div css={ color ==="green" ? contact_me : red } onClick={() => setColor(color === "green" ? "red" : "green") }>
                 <Link to="/contact">Work with me</Link>

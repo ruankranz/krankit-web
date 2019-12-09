@@ -1,16 +1,16 @@
 /** @jsx jsx */
 import React from 'react';
 import { jsx, css } from '@emotion/core'
-import Layout from './Layout'
+import { Link } from 'react-router-dom'
 
 const GalleryItem = (props) => {
     const { label, image, description, link } = props;
     return (
         <div css={ item }>
-            <h5 css={ header }>{ label }</h5>
-            <img source={ image } />
-            <p>{ description }</p>
-            <div>{link}</div>
+          <h5 css={ header }>{ label }</h5>
+          <img source={ image } alt={ label } />
+          <p>{ description }</p>
+          <Link to={ link }>View</Link>
         </div>
     )
 }

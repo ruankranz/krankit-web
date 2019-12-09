@@ -7,21 +7,26 @@ import {
 import { jsx } from '@emotion/core'
 import About from './components/About'
 import AppGallery from './components/AppGallery'
+import GamesGallery from './components/GamesGallery'
 import Home from './components/Home'
 import Contact from './components/Contact'
+import WindowDimensionsProvider from './services/WindowDimensionsProvider'
 
 
 function App() {
 
     return (
-        <Router>
-            <Switch>
-                <Route path="/about" component={ About } />
-                <Route path="/contact" component={ Contact } />
-                <Route path="/gallery" component={ AppGallery } />
-                <Route path="/" component={ Home } />
-            </Switch>
-        </Router>
+        <WindowDimensionsProvider>
+            <Router>
+                <Switch>
+                    <Route path="/about" component={ About } />
+                    <Route path="/contact" component={ Contact } />
+                    <Route path="/apps" component={ AppGallery } />
+                    <Route path="/games" component={ GamesGallery } />
+                    <Route path="/" component={ Home } />
+                </Switch>
+            </Router>
+        </WindowDimensionsProvider>
     );
 }
 

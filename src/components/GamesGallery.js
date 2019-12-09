@@ -5,7 +5,7 @@ import Layout from './Layout'
 import PageHeader from './Header'
 import Gallery from './Gallery'
 
-const AppGallery = () => {
+const GamesGallery = () => {
 
     const items = [
         {label: "test", image: "", description: "Just say mkay!", link: "https://krankit.co.za"},
@@ -15,10 +15,10 @@ const AppGallery = () => {
 
     return (
         <Layout label="gallery">
-            <PageHeader title="Application Gallery" sub_title="Explore the projects we are working on"/>
+            <PageHeader title="Games Gallery" sub_title="Checkout some of the cool games we've made"/>
             <Gallery items={ items } />
         </Layout>
     )
 }
 
-export default AppGallery
+export default GamesGallery
