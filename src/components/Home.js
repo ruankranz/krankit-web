@@ -1,46 +1,35 @@
 /** @jsx jsx */
-import React from 'react';
-import { jsx, css } from '@emotion/core'
-import Layout from './Layout'
+import React, {Suspense} from 'react';
+import { jsx, css } from '@emotion/core';
+import Layout from './Layout';
+import logo from '../assets/images/metatron.png';
+
 
 export default function Home () {
 
     return (
-        <Layout>
+        <Suspense fallback={<h1>Loading home...</h1>}>
+          <Layout>
             <div css={ text_container }>
-                <div>
-                    <p css={ main_text }>Unfortunately...</p>
-                </div>
-                <div>
-                    <p css={ mid_text }>no one can be told what the Matrix is.</p>
-                </div>
-                <div>
-                    <p css={ bot_text }>You have to see it for yourself.</p>
-                </div>
+              <p>Unfortunately,</p>
+              <p>no one can be told what the Matrix is...</p>
+              <p>You have to see it for yourself.</p>
+              <img css={logo_image} style={{animation: `spin ${8}s linear infinite`}} src={logo} alt="img"/>
             </div>
-        </Layout>
+          </Layout>
+        </Suspense>
     )
 }
 
+const logo_image = css`
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+`
 
 const text_container = css`
-width: 100%;
 font-size: 1.4em;
-display: flex;
-flex-direction: column;
-`
 
-
-const main_text = css`
-font-size: 2em;
-float: left;
-`
-
-const mid_text = css`
-font-size: 1.6em;
-float: left;
-`
-const bot_text = css`
-font-size: 1.4em;
-float: right;
+align-self: center;
 `
