@@ -30,19 +30,11 @@ function Layout(props) {
 export default Layout;
 
 const main =css`
-display: flex;
-overflow: hidden;
 height: 100vh;
 `
 
 const content = css`
-position: absolute;
-top: 0;
-left: 0;
-display: flex;
-align-items: center;
-width: 100%;
-height: 95%;
+
 `
 
 const content_bottom = css`
@@ -53,26 +45,17 @@ margin: auto 0 0 0;
 `
 
 const content_inner = css`
-z-index: 100;
-flex-direction: column;
-align-content: flex-start;
-padding: 2.5em 2.5em 0;
-position: absolute;
-top: 0;
-left: 0;
-right:0;
 display: flex;
-align-items: center;
-height: 100%;
+flex-direction: column;
+padding: 2.5em 2.5em 0;
 `
 
 const content_body = css`
-display: block;
 text-align: center;
 font-size: 1.85em;
-flex: none;
 width: 100%;
 margin: 2em 0 0 auto;
+min-height: 78vh;
 `
 
 const content_top = css`

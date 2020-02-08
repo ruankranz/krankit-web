@@ -16,5 +16,4 @@ export default PageHeader
 
 const container = css` 
 align-self: center;
-margin-bottom: 4em;
 `

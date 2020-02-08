@@ -30,6 +30,5 @@ const logo_image = css`
 
 const text_container = css`
 font-size: 1.4em;
-
 align-self: center;
 `
