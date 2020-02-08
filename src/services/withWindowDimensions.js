@@ -10,14 +10,14 @@ const withWindowDimensions = mapDimensionsToProps => WrappedComponent => {
         render() {
             const { forwardedRef } = this.props
             return (
-                    <WindowDimensionsCtx.Consumer>
-                    {dimensions => (
-                            <WrappedComponent
-                        {...this.props}
-                        {...mapDimensionsToProps(dimensions)}
-                        ref={forwardedRef}
-                            />
-                    )}
+                <WindowDimensionsCtx.Consumer>
+                  {dimensions => (
+                      <WrappedComponent
+                          {...this.props}
+                          {...mapDimensionsToProps(dimensions)}
+                          ref={forwardedRef}
+                      />
+                  )}
                 </WindowDimensionsCtx.Consumer>
             )
         }

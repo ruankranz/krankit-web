@@ -17,8 +17,8 @@ const WindowDimensionsProvider = ({ children }) => {
         return () => { window.removeEventListener('resize', handleResize) }
     }, [])
     return (
-            <WindowDimensionsCtx.Provider value={dimensions}>
-            {children}
+        <WindowDimensionsCtx.Provider value={dimensions}>
+          {children}
         </WindowDimensionsCtx.Provider>
     )
 }
