@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/core": "10.0.17",
+    "@chakra-ui/core": "^0.5.2",
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
     "lodash": "4.17.15",
     "moment": "2.24.0",
     "react": "^16.10.2",
