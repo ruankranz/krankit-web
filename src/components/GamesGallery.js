@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core'
 import Layout from './Layout'
 import PageHeader from './Header'
 import Gallery from './Gallery'
-import metatron from '../metatron.png'
+import metatron from '../assets/images/metatron.png';
 
 const GamesGallery = () => {
 

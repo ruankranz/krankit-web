@@ -11,21 +11,24 @@ import GamesGallery from './components/GamesGallery'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import WindowDimensionsProvider from './services/WindowDimensionsProvider'
+import { ThemeProvider } from "@chakra-ui/core";
 
 
 function App() {
 
     return (
         <WindowDimensionsProvider>
+          <ThemeProvider>
             <Router>
-                <Switch>
-                    <Route path="/about" component={ About } />
-                    <Route path="/contact" component={ Contact } />
-                    <Route path="/apps" component={ AppGallery } />
-                    <Route path="/games" component={ GamesGallery } />
-                    <Route path="/" component={ Home } />
-                </Switch>
+              <Switch>
+                <Route path="/about" component={ About } />
+                <Route path="/contact" component={ Contact } />
+                <Route path="/apps" component={ AppGallery } />
+                <Route path="/games" component={ GamesGallery } />
+                <Route path="/" component={ Home } />
+              </Switch>
             </Router>
+          </ThemeProvider>
         </WindowDimensionsProvider>
     );
 }
