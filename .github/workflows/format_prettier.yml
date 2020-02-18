@@ -1,0 +1,30 @@
+name: Format (prettier)
+
+on:
+    pull_request:
+        paths:
+            - '**.css'
+            - '**.js'
+            - '**.jsx'
+            - '**.ts'
+
+jobs:
+    prettier:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Install
+              run: npm install
+              env:
+                  CI: true
+
+            - name: Run prettier
+              run: npm run prettier --write 'src/**/*.{css,js,jsx}'
+
+            - uses: stefanzweifel/git-auto-commit-action@v2.1.0
+              with:
+                  commit_message: Apply prettier changes
+                  branch: ${{ github.head_ref }}
+              env:
+                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
