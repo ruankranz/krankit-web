@@ -6,10 +6,9 @@
         "checkJs": true,
         "jsx": "react",
         "moduleResolution": "Node",
-        "lib": [ "dom", "es2017" ]
+        "lib": [ "dom", "es2017" ],
+        "baseUrl": "src"
     },
-    "include": [
-        "./"
-    ],
+    "include": ["src"],
     "exclude": ["node_modules"]
 }
