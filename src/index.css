@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto Mono', monospace;
-  color: #FFF;
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
   background: #191919;
 }
 
@@ -16,16 +16,16 @@ code {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    outline: none;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
 
-    &:hover {
-        color: red;
-    }
+  &:hover {
+    color: red;
+  }
 
-    &:active {
-        color: red;
-    }
+  &:active {
+    color: red;
+  }
 }
