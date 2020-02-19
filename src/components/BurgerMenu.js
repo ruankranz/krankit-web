@@ -1,7 +1,7 @@
 import React from "react";
 import { jsx, css } from "@emotion/core";
 
-const Burgermenu = props => {
+const Burgermenu = (props) => {
   return (
     <div css={Wrapper} onClick={props.handleNavbar}>
       <div css={props.navbarState ? "open" : ""}>

@@ -8,7 +8,7 @@ const Gallery = ({ items }) => {
   let { width } = useWindowDimensions();
   return (
     <div css={width > 780 ? container : [container, container_mobile]}>
-      {items.map(item => (
+      {items.map((item) => (
         <GalleryItem
           label={item.label}
           description={item.desription}

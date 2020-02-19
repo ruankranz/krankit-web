@@ -1,7 +1,7 @@
 import React, { PureComponent, forwardRef } from "react";
 import { WindowDimensionsCtx } from "../WindowDimensionsProvider";
 
-const withWindowDimensions = mapDimensionsToProps => WrappedComponent => {
+const withWindowDimensions = (mapDimensionsToProps) => (WrappedComponent) => {
   class Wrapped extends PureComponent {
     static displayName = `withWindowDimensions(${WrappedComponent.displayName ||
       WrappedComponent.name})`;
@@ -10,7 +10,7 @@ const withWindowDimensions = mapDimensionsToProps => WrappedComponent => {
       const { forwardedRef } = this.props;
       return (
         <WindowDimensionsCtx.Consumer>
-          {dimensions => (
+          {(dimensions) => (
             <WrappedComponent
               {...this.props}
               {...mapDimensionsToProps(dimensions)}

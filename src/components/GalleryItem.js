@@ -3,7 +3,7 @@ import React from "react";
 import { jsx, css } from "@emotion/core";
 import { Link } from "react-router-dom";
 
-const GalleryItem = props => {
+const GalleryItem = (props) => {
   const { label, image, description, link } = props;
   return (
     <div css={item}>
