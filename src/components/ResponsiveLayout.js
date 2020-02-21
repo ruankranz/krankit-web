@@ -1,4 +1,4 @@
-import { useWindowDimensions } from "../WindowDimensionsProvider";
+import { useWindowDimensions } from "services/WindowDimensionsProvider";
 
 const ResponsiveLayout = ({ breakPoint = 414, renderMobile, renderDesktop }) => {
   const { width } = useWindowDimensions();

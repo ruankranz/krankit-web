@@ -1,31 +1,22 @@
-/** @jsx jsx */
 import React from "react";
-import { jsx, css } from "@emotion/core";
-import { Link } from "react-router-dom";
+import { Box, Badge, Text, Image } from "@chakra-ui/core";
 
-const GalleryItem = (props) => {
-  const { label, image, description, link } = props;
+const GalleryItem = ({ item }) => {
   return (
-    <div css={item}>
-      <h5 css={header}>{label}</h5>
-      <img src={image} alt={label} />
-      <p>{description}</p>
-      <Link to={link}>View</Link>
-    </div>
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden">
+      <Image rounded="md" src={item.image} />
+      <Box p="6">
+        <Box d="flex" alignItems="baseline">
+          <Badge rounded="full" px="2" variantColor="teal">
+            {item.label}
+          </Badge>
+        </Box>
+      </Box>
+      <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
+        {item.description}
+      </Text>
+    </Box>
   );
 };
 
 export default GalleryItem;
-
-const item = css`
-  flex: 1;
-  margin: 5px;
-  border: solid 1px #fff;
-  text-align: center;
-  padding: 10px;
-`;
-
-const header = css`
-  font-weight: 700;
-  text-decoration: underline;
-`;
