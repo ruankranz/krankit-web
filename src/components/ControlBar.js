@@ -43,7 +43,3 @@ const red = css`
   margin: 0 0 0 auto;
   color: red;
 `;
-
-const container = css`
-  display: flex;
-`;

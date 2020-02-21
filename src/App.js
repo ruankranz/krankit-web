@@ -1,7 +1,8 @@
+// eslint-disable-next-line
 import React from "react";
-import WindowDimensionsProvider from "./services/WindowDimensionsProvider";
 import { ThemeProvider, ColorModeProvider } from "@chakra-ui/core";
-import MainRouter from "./components/MainRouter";
+import WindowDimensionsProvider from "services/WindowDimensionsProvider";
+import MainRouter from "components/MainRouter";
 
 function App() {
   return (

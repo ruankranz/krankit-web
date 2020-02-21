@@ -1,12 +1,11 @@
 /** @jsx jsx */
+// eslint-disable-next-line
 import React from "react";
 import { jsx, css } from "@emotion/core";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 function SocialLinks(props) {
-  const { label } = props;
-
   return (
     <div css={social_links}>
       <Link css={social_link} to="/about">

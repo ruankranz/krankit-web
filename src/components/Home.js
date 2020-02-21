@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// eslint-disable-next-line
 import React, { Suspense } from "react";
 import { jsx, css } from "@emotion/core";
 import Layout from "./Layout";

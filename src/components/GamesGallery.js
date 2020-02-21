@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React from "react";
-import { jsx } from "@emotion/core";
 import Layout from "./Layout";
 import PageHeader from "./Header";
 import Gallery from "./Gallery";
@@ -29,36 +27,6 @@ const GamesGallery = () => {
     {
       label: "test",
       image: metatron,
-      description: "Just say mkay!",
-      link: "https://krankit.co.za"
-    },
-    {
-      label: "test",
-      image: "",
-      description: "Just say mkay!",
-      link: "https://krankit.co.za"
-    },
-    {
-      label: "test",
-      image: "",
-      description: "Just say mkay!",
-      link: "https://krankit.co.za"
-    },
-    {
-      label: "test",
-      image: "",
-      description: "Just say mkay!",
-      link: "https://krankit.co.za"
-    },
-    {
-      label: "test",
-      image: "",
-      description: "Just say mkay!",
-      link: "https://krankit.co.za"
-    },
-    {
-      label: "test",
-      image: "",
       description: "Just say mkay!",
       link: "https://krankit.co.za"
     }

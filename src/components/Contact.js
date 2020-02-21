@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React from "react";
-import { jsx } from "@emotion/core";
 import Layout from "./Layout";
 
 export default function Contact() {
